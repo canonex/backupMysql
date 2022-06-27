@@ -1,9 +1,6 @@
 # ignore configuration files
 config.sh
 
-# ignore syncthing files
-.stfolder
-.stversions
 
 # ignore other files
 .vscode
@@ -13,6 +10,3 @@ backup
 *~
 Test/
 
-# ignore OS generated files
-Thumbs.db
-.DS_Store
