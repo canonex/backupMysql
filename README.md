@@ -1,6 +1,9 @@
 # Backup mysql using mysqldump
 Allows to backup all the database in a collective dump, keeping routines and users, quoting names, and dumping events.
 
+![Db tools](db-tools.svg)
+
+
 ## Config
 A config file is required. It will be created at first use if not present.
 The structure is similar to:
