@@ -26,6 +26,8 @@ The structure is similar to:
 The execution of this file can be planned with crontab, normally as root user:
 
 `37 18 * * 5     /bin/bash -c "/home/mydir/backupMysql.sh"`
+`24 1 * * 4     /bin/bash -c "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin;/home/root/backupMysql/backupMysql.sh"`
+
 
 This command will create a backup file and a new file.
 
