@@ -92,7 +92,7 @@ if [ -n "$NAME" ]; then
   echo "Using named authentication."
 
 	#Create the dump
-	if mysqldump --skip-lock-tables --quote-names --routines --events --all-databases -u $NAME --password=$PASS 2>"$LOG_LOCATION" >"$FILE"
+	if mysqldump --skip-lock-tables --quote-names --routines --events --hex-blob --all-databases -u $NAME --password=$PASS 2>"$LOG_LOCATION" >"$FILE"
 	then
 		echo -e "mysqldump successfully finished at $(date +'%d-%m-%Y %H:%M:%S')"$'\r' | tee -a "$LOG_LOCATION"
 	else
@@ -105,7 +105,7 @@ else
   echo "Using system authentication."
 
 	#Create the dump
-	if mysqldump --skip-lock-tables --quote-names --routines --events --all-databases 2>"$LOG_LOCATION" >"$FILE"
+	if mysqldump --skip-lock-tables --quote-names --routines --events --hex-blob --all-databases 2>"$LOG_LOCATION" >"$FILE"
 	then
 		echo -e "mysqldump successfully finished at $(date +'%d-%m-%Y %H:%M:%S')"$'\r' | tee -a "$LOG_LOCATION"
 	else
